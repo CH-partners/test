@@ -236,3 +236,72 @@ input {
     transform: translateY(0);
   }
 }
+@media (max-width: 768px) {
+  .splash-page {
+    padding: 20px;
+  }
+
+  .main-logo {
+    transform: scale(0.75);
+  }
+
+  .law-text {
+    font-size: 18px;
+  }
+
+  .big-logo {
+    font-size: 72px;
+  }
+
+  .partners-text {
+    font-size: 22px;
+  }
+
+  .system-text {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .button-area {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .button-area button {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 360px;
+    padding: 28px 22px;
+  }
+
+  .card input {
+    width: 100%;
+  }
+
+  .card button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-logo {
+    transform: scale(0.6);
+  }
+
+  .big-logo {
+    font-size: 58px;
+  }
+
+  .partners-text {
+    font-size: 18px;
+  }
+
+  .system-text {
+    font-size: 12px;
+  }
+}
