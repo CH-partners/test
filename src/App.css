@@ -305,3 +305,10 @@ input {
     font-size: 12px;
   }
 }
+.copyright {
+  margin-top: 50px;
+  font-size: 11px;
+  color: #999;
+  text-align: center;
+  opacity: 0.4;
+}

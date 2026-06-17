@@ -35,6 +35,9 @@ function StartPage() {
             회원가입
           </button>
         </div>
+        <div className="copyright">
+          © 2026 The 춘. All Rights Reserved.
+        </div>
       </div>
     </div>
   );
