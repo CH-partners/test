@@ -8,7 +8,7 @@ function StartPage() {
     <div className="splash-page">
       <div className="splash-logo-wrap">
         <div className="main-logo">
-          <span className="law-text">法務法人</span>
+          <span className="law-text">법무법인</span>
 
           <span className="big-logo-wrap">
             <span className="big-logo">淸</span>
