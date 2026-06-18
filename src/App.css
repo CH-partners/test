@@ -312,3 +312,271 @@ input {
   text-align: center;
   opacity: 0.4;
 }
+.logout-btn {
+  border: none;
+  background: #111827;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #374151;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .dashboard-grid,
+  .main-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card,
+  .main-card {
+    width: 100%;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+}
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f8fafc;
+}
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+}
+
+.firm-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b4ea2;
+  margin-bottom: 4px;
+}
+
+.brand-name {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1;
+  color: #002b6f;
+
+  text-shadow:
+     1px 1px 0 #c8a24a,
+    -1px 1px 0 #c8a24a,
+     1px -1px 0 #c8a24a,
+    -1px -1px 0 #c8a24a;
+}
+
+.sidebar-subtitle {
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: rgba(120, 120, 120, 0.35);
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-menu-item {
+  all: unset;
+
+  display: block;
+  width: 100%;
+
+  padding: 10px 0;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: #475569;
+  font-family: inherit;
+
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.sidebar-menu-item:hover {
+  color: #111827;
+  transform: scale(1.05);
+  padding-left: 12px;
+}
+
+.sidebar-menu-item:hover::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 18px;
+  background: #111827;
+  border-radius: 999px;
+}
+
+.menu-icon {
+  font-size: 22px;
+}
+
+.sidebar-menu-item small {
+  display: block;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.sidebar-user {
+  margin-top: auto;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #002b6f;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.profile-info strong {
+  display: block;
+  font-size: 14px;
+  color: #111827;
+}
+
+.profile-info span {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+}
+
+.content-header {
+  margin-bottom: 24px;
+}
+
+.content-header h1 {
+  margin: 0;
+}
+
+.content-header p {
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.card-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.dashboard-card h3 {
+  margin: 0 0 8px;
+}
+
+.dashboard-card p {
+  margin: 0;
+  color: #64748b;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
