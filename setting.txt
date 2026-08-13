@@ -1,2 +1,1 @@
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-& "C:\RightsAnalysis\venv\Scripts\Activate.ps1"
+if ($env:TEST_DATABASE_URL) { "TEST_DATABASE_URL=SET" } else { "TEST_DATABASE_URL=NOT_SET" }
