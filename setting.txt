@@ -7,3 +7,6 @@ Invoke-RestMethod : 원격 서버에 연결할 수 없습니다.
    estMethod], WebException
     + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRest
    MethodCommand
+
+
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
