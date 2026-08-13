@@ -1,1 +1,12 @@
-if ($env:TEST_DATABASE_URL) { "TEST_DATABASE_URL=SET" } else { "TEST_DATABASE_URL=NOT_SET" }
+$sec = Read-Host "rights_analysis_test_app DB password" -AsSecureString
+$bstr = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($sec)
+try {
+    $pw = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($bstr)
+    $enc = [uri]::EscapeDataString($pw)
+    $env:TEST_DATABASE_URL = "postgresql+psycopg://rights_analysis_test_app:$enc@127.0.0.1:5432/rights_analysis_test"
+}
+finally {
+    [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($bstr)
+    Remove-Variable pw, enc, sec -ErrorAction SilentlyContinue
+}
+"TEST_DATABASE_URL=SET"
