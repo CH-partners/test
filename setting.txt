@@ -4,3 +4,6 @@
 
 
 Get-Service Tailscale | Select-Object Name, Status, StartType
+
+
+& "C:\Program Files\Tailscale\tailscale.exe" status
