@@ -1,12 +1,9 @@
-& "C:\Program Files\Tailscale\tailscale.exe" status
-
-100.125.202.29  ra-server  eastspring1979@  windows  -
-
-
-Get-Service Tailscale | Select-Object Name, Status, StartType
-
-
-& "C:\Program Files\Tailscale\tailscale.exe" status
-
-
-Invoke-RestMethod http://127.0.0.1:8000/api/v1/health/live
+(venv) PS C:\RightsAnalysis\app\backend> Invoke-RestMethod http://127.0.0.1:8000/api/v1/health/live
+Invoke-RestMethod : 원격 서버에 연결할 수 없습니다.
+위치 줄:1 문자:1
++ Invoke-RestMethod http://127.0.0.1:8000/api/v1/health/live
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-R
+   estMethod], WebException
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRest
+   MethodCommand
